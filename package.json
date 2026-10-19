@@ -6,6 +6,7 @@
     "assets": "capacitor-assets generate --ios --android --iconBackgroundColor '#02111C' --iconBackgroundColorDark '#02111C' --splashBackgroundColor '#02111C' --splashBackgroundColorDark '#02111C' --logoSplashTargetWidth 512",
     "sync": "cap sync",
     "ios": "cap open ios",
+    "ios:simulador": "TERRAVERA_SIMULADOR=1 cap sync ios && cap open ios",
     "android": "cap open android"
   },
   "license": "UNLICENSED",

@@ -1,12 +1,22 @@
 require_relative '../../node_modules/@capacitor/ios/scripts/pods_helpers'
 
-platform :ios, '15.0'
+platform :ios, '15.5'
 use_frameworks!
 
 # workaround to avoid Xcode caching of Pods that requires
 # Product -> Clean Build Folder after new Cordova plugins installed
 # Requires CocoaPods 1.6 or newer
 install! 'cocoapods', :disable_input_output_paths => true
+
+# Modo simulador (`npm run ios:simulador`): Google ML Kit (lector de QR) solo trae binarios
+# Intel para el simulador, y los simuladores de iOS 26 en Mac con Apple Silicon ya no los
+# ejecutan. En este modo se deja fuera el lector (el simulador tampoco tiene cámara).
+# Antes de compilar para un iPhone real o la App Store, vuelve con `npm run sync`.
+if ENV['TERRAVERA_SIMULADOR'] == '1'
+  def pod(name, *args)
+    super unless name == 'CapacitorMlkitBarcodeScanning'
+  end
+end
 
 def capacitor_pods
   pod 'Capacitor', :path => '../../node_modules/@capacitor/ios'

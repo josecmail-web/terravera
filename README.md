@@ -10,13 +10,13 @@ Guía completa del proyecto: https://claude.ai/code/artifact/6a4fb7dc-ab64-4f12-
 | --- | --- |
 | Paso 1 · web en Lovable | Hecho y publicado (19/10/2026) |
 | Paso 2 · proyecto Capacitor | Hecho: `capacitor.config.ts`, pantalla «Sin conexión» (`www/`), plugins con las versiones de la guía, carpetas `ios/` y `android/` |
-| Paso 3 · iPhone | Hecho en archivos: nombre «TERRAVERA», permiso de cámara, push, Background Modes, Associated Domains (`App.entitlements`), Firebase Messaging, solo iPhone y en vertical, iOS 15+ |
+| Paso 3 · iPhone | Hecho en archivos: nombre «TERRAVERA», permiso de cámara, push, Background Modes, Associated Domains (`App.entitlements`), Firebase Messaging, solo iPhone y en vertical, iOS 15.5+ (lo exige ML Kit 7) |
 | Paso 4 · Android | Hecho en archivos: nombre «TERRAVERA», cámara, notificaciones, App Links con `autoVerify`, color de las notificaciones, API 36 |
 | Paso 5 · iconos | Hecho con el sello de la web (`public/icon-512.png`): iconos y pantalla de inicio sobre #02111C. Falta el icono de notificación de Android (ver abajo) |
 
 ## Pasos en el Mac
 
-Requisitos: Xcode, Android Studio, Node.js LTS y CocoaPods (`brew install cocoapods`).
+Requisitos: Xcode (seleccionado con `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`), Android Studio, Node.js LTS, CocoaPods y Java 21 (`brew install node@24 cocoapods openjdk@21`).
 
 ```sh
 git clone <este repositorio> club-terravera-app
@@ -47,6 +47,23 @@ npm run sync      # copia la configuración e instala los pods de iOS
 npm run ios       # abre Xcode
 npm run android   # abre Android Studio
 ```
+
+### Simulador de iPhone
+
+Google ML Kit (el lector de QR) solo trae binarios Intel para el simulador, y los simuladores de iOS 26 en un Mac con Apple Silicon ya no los ejecutan («TERRAVERA debe actualizarse»). Para probar en el simulador:
+
+```sh
+npm run ios:simulador   # instala los pods sin el lector de QR y abre Xcode
+```
+
+El simulador no tiene cámara, así que no se pierde nada. **Antes de compilar para un iPhone real o la App Store, vuelve con `npm run sync`** (reinstala el lector).
+
+### Java 21 para Android
+
+El proyecto usa Gradle 8.11.1 y el Android Gradle Plugin 8.7.2 de Capacitor 7, que **no funcionan con Java 25** (el que trae Android Studio). No actualices el plugin: usa Java 21.
+
+- Android Studio: *Settings → Build, Execution, Deployment → Build Tools → Gradle → Gradle JDK* → `/opt/homebrew/opt/openjdk@21`.
+- Línea de comandos: `JAVA_HOME=/opt/homebrew/opt/openjdk@21 ./gradlew assembleDebug` dentro de `android/`.
 
 ### 4. iPhone (Xcode)
 
