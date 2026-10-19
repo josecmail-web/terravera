@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+
+# Claves de firma de Android: NUNCA al repositorio (guárdalas aparte con su contraseña)
+*.jks
+*.keystore
+keystore.properties
+
+# Configuración de Firebase: se descarga de la consola de Firebase en cada Mac
+android/app/google-services.json
+ios/App/App/GoogleService-Info.plist

@@ -1,0 +1,29 @@
+{
+  "name": "club-terravera-app",
+  "version": "1.0.0",
+  "description": "Apps de iPhone y Android del Club TERRAVERA (Capacitor, carga terraveraclub.com)",
+  "scripts": {
+    "assets": "capacitor-assets generate --iconBackgroundColor '#02111C' --iconBackgroundColorDark '#02111C' --splashBackgroundColor '#02111C' --splashBackgroundColorDark '#02111C'",
+    "sync": "cap sync",
+    "ios": "cap open ios",
+    "android": "cap open android"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@capacitor-mlkit/barcode-scanning": "7.5.0",
+    "@capacitor/android": "7.6.9",
+    "@capacitor/app": "7.1.2",
+    "@capacitor/browser": "7.0.5",
+    "@capacitor/core": "7.6.9",
+    "@capacitor/ios": "7.6.9",
+    "@capacitor/push-notifications": "7.0.7",
+    "@capacitor/splash-screen": "7.0.5",
+    "@capacitor/status-bar": "7.0.6"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "3.0.5",
+    "@capacitor/cli": "7.6.9",
+    "typescript": "5.9.3"
+  }
+}
