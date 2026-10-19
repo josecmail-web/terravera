@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Apps de iPhone y Android del Club TERRAVERA (Capacitor, carga terraveraclub.com)",
   "scripts": {
-    "assets": "capacitor-assets generate --iconBackgroundColor '#02111C' --iconBackgroundColorDark '#02111C' --splashBackgroundColor '#02111C' --splashBackgroundColorDark '#02111C'",
+    "assets": "capacitor-assets generate --ios --android --iconBackgroundColor '#02111C' --iconBackgroundColorDark '#02111C' --splashBackgroundColor '#02111C' --splashBackgroundColorDark '#02111C' --logoSplashTargetWidth 512",
     "sync": "cap sync",
     "ios": "cap open ios",
     "android": "cap open android"

@@ -12,7 +12,7 @@ Guía completa del proyecto: https://claude.ai/code/artifact/6a4fb7dc-ab64-4f12-
 | Paso 2 · proyecto Capacitor | Hecho: `capacitor.config.ts`, pantalla «Sin conexión» (`www/`), plugins con las versiones de la guía, carpetas `ios/` y `android/` |
 | Paso 3 · iPhone | Hecho en archivos: nombre «TERRAVERA», permiso de cámara, push, Background Modes, Associated Domains (`App.entitlements`), Firebase Messaging, solo iPhone y en vertical, iOS 15+ |
 | Paso 4 · Android | Hecho en archivos: nombre «TERRAVERA», cámara, notificaciones, App Links con `autoVerify`, color de las notificaciones, API 36 |
-| Paso 5 · iconos | Pendiente del sello en PNG (ver abajo) |
+| Paso 5 · iconos | Hecho con el sello de la web (`public/icon-512.png`): iconos y pantalla de inicio sobre #02111C. Falta el icono de notificación de Android (ver abajo) |
 
 ## Pasos en el Mac
 
@@ -26,11 +26,9 @@ npm install
 
 ### 1. Sello e iconos
 
-1. Copia el sello de TERRAVERA (oro, fondo transparente, al menos 1024 × 1024 px) en:
-   - `assets/logo.png` → icono y pantalla de inicio
-   - `www/sello.png` → pantalla «Sin conexión»
-2. `npm run assets` genera todos los iconos y pantallas de inicio sobre #02111C.
-3. Sustituye `android/app/src/main/res/drawable/ic_stat_terravera.xml` por el sello **en blanco** (el actual es provisional: una «T» en un círculo). En Android Studio: *File → New → Vector Asset* a partir de un SVG del sello.
+Los iconos ya están generados a partir de `assets/logo.png` (el sello de la web, 512 × 512 px). El icono de 1024 px de la App Store sale ampliado del de 512: si tienes el sello en más resolución, cópialo en `assets/logo.png` y ejecuta `npm run assets`.
+
+Falta un paso: sustituye `android/app/src/main/res/drawable/ic_stat_terravera.xml` por el sello **en blanco** (el actual es provisional: una «T» en un círculo). En Android Studio: *File → New → Vector Asset* a partir de un SVG del sello.
 
 ### 2. Firebase (notificaciones)
 
