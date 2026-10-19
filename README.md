@@ -33,7 +33,7 @@ Falta un paso: sustituye `android/app/src/main/res/drawable/ic_stat_terravera.xm
 ### 2. Firebase (notificaciones)
 
 1. En [console.firebase.google.com](https://console.firebase.google.com), añade una app iOS y una Android, ambas con `com.terraveraclub.app`.
-2. Descarga `GoogleService-Info.plist` → `ios/App/App/` (y añádelo al target App en Xcode).
+2. Descarga `GoogleService-Info.plist` → `ios/App/App/`. Ya está añadido al target App en Xcode: si falta el archivo, Xcode no compila.
 3. Descarga `google-services.json` → `android/app/`.
 4. Sube a Firebase la clave APNs (.p8) del Apple Developer (*Project settings → Cloud Messaging*).
 5. En Lovable, añade el secreto `FIREBASE_SERVICE_ACCOUNT` (JSON de la cuenta de servicio).
