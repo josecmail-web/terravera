@@ -73,7 +73,9 @@ El proyecto usa Gradle 8.11.1 y el Android Gradle Plugin 8.7.2 de Capacitor 7, q
 
 ### 5. Android (Android Studio)
 
-- Crea la clave de firma una vez (*Build → Generate Signed App Bundle*) y guárdala con su contraseña fuera del repositorio. Activa Play App Signing.
+- La clave de subida ya está creada (alias `upload`) en `~/Documents/TERRAVERA-claves/terravera-upload.jks`, fuera del repositorio. Guarda una copia de seguridad y la contraseña en tu gestor de contraseñas. Activa Play App Signing.
+- Para compilar el paquete de Play: `npm run android:aab` (pide la contraseña, no la guarda) → `android/app/build/outputs/bundle/release/app-release.aab`. En cada versión nueva sube `versionCode` y `versionName` en `android/app/build.gradle`.
+- Huella SHA-256 de la clave de subida: `A7:20:83:29:D2:FD:0F:B2:C5:AC:F7:DD:14:77:0D:C1:5F:AD:0D:6B:0B:1A:83:89:FC:D8:4E:5B:D3:F7:51:50`.
 - Guarda las huellas SHA-256 (la de subida y la de Play App Signing) en **Admin → Configuración → Apps móviles**.
 
 ### 6. Pruebas en móviles reales
