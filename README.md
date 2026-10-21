@@ -11,7 +11,7 @@ Guía completa del proyecto: https://claude.ai/code/artifact/6a4fb7dc-ab64-4f12-
 | Paso 1 · web en Lovable | Hecho y publicado (19/10/2026) |
 | Paso 2 · proyecto Capacitor | Hecho: `capacitor.config.ts`, pantalla «Sin conexión» (`www/`), plugins con las versiones de la guía, carpetas `ios/` y `android/` |
 | Paso 3 · iPhone | Hecho en archivos: nombre «TERRAVERA», permiso de cámara, push, Background Modes, Associated Domains (`App.entitlements`), Firebase Messaging, solo iPhone y en vertical, iOS 15.5+ (lo exige ML Kit 7) |
-| Paso 4 · Android | Hecho en archivos: nombre «TERRAVERA», cámara, notificaciones, App Links con `autoVerify`, color de las notificaciones, API 36 |
+| Paso 4 · Android | Hecho en archivos: nombre «TERRAVERA», cámara, notificaciones, App Links con `autoVerify`, color de las notificaciones, API 36, mínimo Android 7.0 (API 24, lo exige la protección automática de Play) |
 | Paso 5 · iconos | Hecho con el sello de la web (`public/icon-512.png`): iconos y pantalla de inicio sobre #02111C. Falta el icono de notificación de Android (ver abajo) |
 
 ## Pasos en el Mac
