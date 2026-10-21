@@ -12,7 +12,7 @@ Guía completa del proyecto: https://claude.ai/code/artifact/6a4fb7dc-ab64-4f12-
 | Paso 2 · proyecto Capacitor | Hecho: `capacitor.config.ts`, pantalla «Sin conexión» (`www/`), plugins con las versiones de la guía, carpetas `ios/` y `android/` |
 | Paso 3 · iPhone | Hecho en archivos: nombre «TERRAVERA», permiso de cámara, push, Background Modes, Associated Domains (`App.entitlements`), Firebase Messaging, solo iPhone y en vertical, iOS 15.5+ (lo exige ML Kit 7) |
 | Paso 4 · Android | Hecho en archivos: nombre «TERRAVERA», cámara, notificaciones, App Links con `autoVerify`, color de las notificaciones, API 36, mínimo Android 7.0 (API 24, lo exige la protección automática de Play) |
-| Paso 5 · iconos | Hecho con el sello de la web (`public/icon-512.png`): iconos y pantalla de inicio sobre #02111C. Falta el icono de notificación de Android (ver abajo) |
+| Paso 5 · iconos | Hecho con el sello de la web (`public/icon-512.png`): iconos y pantalla de inicio sobre #02111C, e icono de notificación de Android con el monograma |
 
 ## Pasos en el Mac
 
@@ -28,7 +28,7 @@ npm install
 
 Los iconos ya están generados a partir de `assets/logo.png` (el sello de la web, 512 × 512 px). El icono de 1024 px de la App Store sale ampliado del de 512: si tienes el sello en más resolución, cópialo en `assets/logo.png` y ejecuta `npm run assets`.
 
-Falta un paso: sustituye `android/app/src/main/res/drawable/ic_stat_terravera.xml` por el sello **en blanco** (el actual es provisional: una «T» en un círculo). En Android Studio: *File → New → Vector Asset* a partir de un SVG del sello.
+El icono de notificación de Android (`android/app/src/main/res/drawable-*/ic_stat_terravera.png`) es el monograma (T y V cruzadas) en blanco sobre transparente, sin el texto circular, que a 24 dp no se lee. Sale del sello de `terravera.svg` (un PNG de 196 px dentro de un SVG de Canva); si algún día hay un vector de verdad, se puede sustituir por un *Vector Asset* en Android Studio.
 
 ### 2. Firebase (notificaciones)
 
