@@ -74,7 +74,8 @@ Las palabras clave van separadas por comas sin espacios. No repitas «Club» ni 
 
 | Tienda | Imagen | Tamaño | Archivo |
 | --- | --- | --- | --- |
-| App Store | Capturas iPhone 6,9" (mínimo 1, hasta 10) | 1320 × 2868 | `tiendas/capturas/ios/` |
+| App Store | Capturas iPhone con Dynamic Island, pantalla mediana 6,1"/6,3" (mínimo 1, hasta 10) | 1206 × 2622 | `tiendas/capturas/ios-6.3/` |
+| App Store | Capturas iPhone 6,9" (por si las pide) | 1320 × 2868 | `tiendas/capturas/ios/` |
 | Google Play | Icono | 512 × 512 PNG | `assets/logo.png` |
 | Google Play | Gráfico destacado | 1024 × 500 | `tiendas/play-grafico-destacado.png` |
 | Google Play | Capturas de teléfono (mínimo 2, hasta 8) | 1080 × 2160 | `tiendas/capturas/android/` |
