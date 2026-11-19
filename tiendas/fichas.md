@@ -1,7 +1,7 @@
 # Fichas de las tiendas · Club TERRAVERA
 
 Textos para App Store Connect y Google Play Console. Los datos del programa salen de
-https://terraveraclub.com/condiciones (v1.0): si cambian las condiciones, revisa estos textos.
+https://terraveraclub.com/condiciones (v1.1, cashback del 5 % para todos desde el 19/11/2026): si cambian las condiciones, revisa estos textos.
 
 ## Comunes
 
@@ -24,12 +24,12 @@ El Club TERRAVERA es el programa de fidelización gratuito de TERRAVERA · Carne
 
 CÓMO FUNCIONA
 • Escanea con la app el código QR de tu ticket.
-• Suma 1 punto por cada euro y cashback según tu nivel.
+• Suma 1 punto por cada euro y un 5 % de cashback en cada compra.
 • Canjea tus recompensas en caja mostrando tu código de canje.
 
 TUS VENTAJAS
 • Cupón de bienvenida de 5 € al unirte, para una compra de 30 € o más.
-• Cashback que crece contigo: Bronce 1 %, Plata 2 % y Oro 3 %.
+• 5 % de cashback en todas tus compras, para usar en caja.
 • Premio de recurrencia: un cupón de 5 € al comprar en 5 días distintos del mismo mes.
 • Invita a tus amigos: 50 puntos para ti y 25 para ellos.
 • Recompensas para canjear con tus puntos.
@@ -47,7 +47,7 @@ Hacerse socio es gratis y no obliga a comprar nada. Consulta las condiciones del
 | Campo | Límite | Valor |
 | --- | --- | --- |
 | Subtítulo | 30 | `Puntos y cashback en TERRAVERA` |
-| Texto promocional | 170 | `Únete gratis, escanea el QR de tu ticket y suma puntos y cashback en cada compra en TERRAVERA · Carnes Selectas. ¡5 € de bienvenida!` |
+| Texto promocional | 170 | `Únete gratis, escanea el QR de tu ticket y gana un 5 % de cashback y puntos en cada compra en TERRAVERA · Carnes Selectas. ¡5 € de bienvenida!` |
 | Palabras clave | 100 | `carnicería,carne,fidelización,puntos,cashback,cupones,recompensas,ticket,Palma,Mallorca,ofertas` |
 | URL de soporte | — | `https://terraveraclub.com/condiciones` (tiene el correo de contacto) |
 | URL de marketing | — | `https://terraveraclub.com` |
